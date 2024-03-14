@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity, Image, TouchableHighlight, SafeAreaView, Keyboard, TouchableWithoutFeedback } from 'react-native';
 import COLORS from "../components/color";
 
-const Category = ({navigation}) => {
+const Categories = ({ navigation }) => {
     const [focus, setFocus] = useState(false);
 
     const onCancel = () => {
@@ -11,22 +11,10 @@ const Category = ({navigation}) => {
     }
 
     return (
-        <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
-            <TouchableWithoutFeedback onPress={onCancel} style={{ flex: 1 }}>
-                <View style={{ marginHorizontal: 40 }}>
-                    <View style={{ marginTop: 20 }}>
-                        <View >
-                            <View>
-                                <View>
-                                    <Text style={{color:'#ADADAD'}}></Text>
-                                </View>
-                            </View>
-                        </View>
-                    </View>
-                </View>
-            </TouchableWithoutFeedback>
-        </SafeAreaView>
+        <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+            <Text>Categories</Text>
+        </View>
     )
 }
 
-export default Category;
+export default Categories;
