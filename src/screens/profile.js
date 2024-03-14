@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity, Image, TouchableHighlight, SafeAreaView, Keyboard, TouchableWithoutFeedback } from 'react-native';
 import COLORS from "../components/color";
 
-const MyOrder = ({navigation}) => {
+const Profile = ({navigation}) => {
     const [focus, setFocus] = useState(false);
 
     const onCancel = () => {
@@ -18,7 +18,7 @@ const MyOrder = ({navigation}) => {
                         <View >
                             <View>
                                 <View>
-                                    <Text style={{color:'#ADADAD'}}>Location</Text>
+                                    <Text style={{color:'#ADADAD'}}></Text>
                                 </View>
                             </View>
                         </View>
@@ -29,4 +29,4 @@ const MyOrder = ({navigation}) => {
     )
 }
 
-export default MyOrder;
+export default Profile;

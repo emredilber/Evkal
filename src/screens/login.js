@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, TouchableHighlight, SafeAreaView, Keyboard, TouchableWithoutFeedback } from 'react-native';
 import COLORS from '../components/color';
+import eyes from '../assets/eyes.svg';
 
-const Login = () => {
+const Login = ({ navigation }) => {
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
     const [isPasswordShown, setIsPasswordShown] = useState(false);
     const [focus, setFocus] = useState(false);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
 
     const onCancel = () => {
         setFocus(false)
@@ -14,11 +16,12 @@ const Login = () => {
     }
 
     const handleLogin = () => {
-        const validEmail = 'example@gmail.com';
-        const validPassword = 'password';
+        const validEmail = '1';
+        const validPassword = '1';      
 
         if (email === validEmail && password === validPassword) {
-            navigation.navigate('Home');
+            setIsAuthenticated(true);
+            navigation.navigate('MainTabs');
         } else {
             alert('Yanlış Bilgiler');
         }

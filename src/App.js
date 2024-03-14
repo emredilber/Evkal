@@ -3,27 +3,29 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Login from './screens/login';
-import home from './screens/home';
+import Home from './screens/home';
+import category from './screens/category';
+import profile from './screens/profile';
 import myCart from './screens/myCart';
 import payment from './screens/payment';
 import confirmPayment from './screens/confirmPayment';
-import myOrder from './screens/myOrder';
+import MyOrder from './screens/myOrder';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const AuthStack = () => (
   <Stack.Navigator initialRouteName='Login'>
-    <Stack.Screen name="myCart" component={myCart} options={{ headerShown: false }} />
-    <Stack.Screen name="payment" component={payment} options={{ headerShown: false }} />
-    <Stack.Screen name="confirmPayment" component={confirmPayment} options={{ headerShown: false }} />
+    <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
   </Stack.Navigator>
 );
 
 const MainTabs = () => (
-  <Tab.Navigator>
-    <Tab.Screen name="Home" component={home} />
-    <Tab.Screen name="My Order" component={myOrder} />
+  <Tab.Navigator screenOptions ={{headerShown:false}}> 
+    <Tab.Screen name="Home" component={Home} />
+    <Tab.Screen name="Category" component={category} />
+    <Tab.Screen name="My Order" component={MyOrder} />
+    <Tab.Screen name="Profile" component={profile} />
   </Tab.Navigator>
 );
 
@@ -37,12 +39,12 @@ const App = () => {
       return <AuthStack />;
     }
   };
-
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
-      </Stack.Navigator >
+          <Stack.Screen name="AuthStack" component={AuthStack} options={{ headerShown: false }} />
+          <Stack.Screen name="MainTabs" component={MainTabs} options={{ headerShown: false }} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 };
