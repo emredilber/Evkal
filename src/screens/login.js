@@ -16,8 +16,8 @@ const Login = ({ navigation }) => {
     }
 
     const handleLogin = () => {
-        const validEmail = '1';
-        const validPassword = '1';      
+        const validEmail = '';
+        const validPassword = '';      
 
         if (email === validEmail && password === validPassword) {
             setIsAuthenticated(true);

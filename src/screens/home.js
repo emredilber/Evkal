@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, ScrollView, Dimensions, Image, TouchableHighlight, SafeAreaView, Keyboard, TouchableWithoutFeedback } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, ScrollView, Dimensions, Image, TouchableHighlight, SafeAreaView, Keyboard, TouchableWithoutFeedback, TouchableOpacityComponent } from 'react-native';
 import COLORS from "../components/color";
 
 const Home = ({ navigation }) => {
@@ -53,7 +53,7 @@ const Home = ({ navigation }) => {
     const width3 = 34;
     const height3 = width3 / aspectRatio3;
     return (
-        <SafeAreaView style={{ flex: 1 }}>
+        <SafeAreaView style={{ flex: 1 , backgroundColor:'#fff'}}>
             <TouchableWithoutFeedback onPress={onCancel} style={{}}>
                 <View style={{ flex: 1, marginHorizontal: 20, marginTop: 20 }}>
                     <View>
@@ -112,10 +112,10 @@ const Home = ({ navigation }) => {
                     <View style={{ marginTop: 15 }}>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                             <Text style={{ fontSize: 17, color: 'black' }}>Categories</Text>
-                            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                            <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center' }}>
                                 <Text style={{ fontSize: 17, color: COLORS.primary, marginHorizontal: 10, fontWeight: 500 }}>See All</Text>
                                 <Image source={require("../assets/arrow-right.png")} />
-                            </View>
+                            </TouchableOpacity>
                         </View>
 
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 20 }}>
@@ -146,23 +146,23 @@ const Home = ({ navigation }) => {
                         <View>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                                 <Text style={{ fontSize: 17, color: 'black' }}>Recommend</Text>
-                                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                                <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center' }}>
                                     <Text style={{ fontSize: 17, color: COLORS.primary, marginHorizontal: 10, fontWeight: 500 }}>See All</Text>
                                     <Image source={require("../assets/arrow-right.png")} />
-                                </View>
+                                </TouchableOpacity>
                             </View>
                             <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly', marginTop: 10 }}>
-                                <View style={{ borderRadius: 15, paddingHorizontal: 10, paddingVertical: 11, backgroundColor: '#D9D9D9' }}>
+                                <TouchableOpacity style={{ borderRadius: 15, paddingHorizontal: 10, paddingVertical: 11, backgroundColor: '#D9D9D9' }}>
                                     <Image source={require("../assets/tomatos.png")} />
                                     <Text style={{ fontSize: 14, color: 'black', marginTop: 5, }}>Tomatos</Text>
-                                </View>
-                                <View style={{ borderRadius: 15, paddingHorizontal: 10, paddingVertical: 11, backgroundColor: '#D9D9D9',}}>
+                                </TouchableOpacity>
+                                <TouchableOpacity style={{ borderRadius: 15, paddingHorizontal: 10, paddingVertical: 11, backgroundColor: '#D9D9D9',}}>
                                     <View style={{ position: 'relative' }}>
                                         <Image source={require("../assets/apples.png")} />
                                     </View>
                                     <Image source={require("../assets/30.png")} style={{ position: 'absolute', top: 0, left: 0 }} />
                                     <Text style={{ fontSize: 14, color: 'black', marginTop: 5 }}>Apples</Text>
-                                </View>
+                                </TouchableOpacity>
                             </View>
                         </View>
                     </View>

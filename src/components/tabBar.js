@@ -1,12 +1,10 @@
-// CustomTabBar.js
-
 import React from 'react';
 import { TouchableOpacity, View, Text, Image } from 'react-native';
 import COLORS from '../components/color';
 
 const CustomTabBar = ({ state, descriptors, navigation }) => {
     return (
-        <View style={{ flexDirection: 'row', height: 60, backgroundColor: '#ffffff' , justifyContent:'space-between'}}>
+        <View style={{ flexDirection: 'row', height: 60, backgroundColor: '#ffffff' , elevation:50}}>
             {state.routes.map((route, index) => {
                 const { options } = descriptors[route.key];
                 const label =
@@ -50,12 +48,11 @@ const CustomTabBar = ({ state, descriptors, navigation }) => {
                             flex: 1,
                             alignItems: 'center',
                             justifyContent: 'center',
-                            marginTop: label === 'My Cart' ? -60 : 0, // 'My Cart' butonunu yukarıda pozisyonlandırma
+                            marginTop: label === 'My Cart' ? -60 : 0,
                         }}
                         onPress={onPress}
                     >
                         {label === 'My Cart' ? (
-                            // 'My Cart' butonu için yuvarlak simge
                             <View style={{ width: 60, height: 60, borderRadius: 60, backgroundColor: COLORS.primary, alignItems: 'center', justifyContent: 'center' }}>
                                 <Image
                                     source={iconSource}
