@@ -4,7 +4,7 @@ import COLORS from '../components/color';
 
 const CustomTabBar = ({ state, descriptors, navigation }) => {
     return (
-        <View style={{ flexDirection: 'row', height: 60, backgroundColor: '#ffffff' , elevation:50}}>
+        <View style={{ flexDirection: 'row', height: 60, backgroundColor: '#ffffff', elevation: 50 }}>
             {state.routes.map((route, index) => {
                 const { options } = descriptors[route.key];
                 const label =
@@ -17,14 +17,18 @@ const CustomTabBar = ({ state, descriptors, navigation }) => {
                 const isFocused = state.index === index;
 
                 const onPress = () => {
-                    const event = navigation.emit({
-                        type: 'tabPress',
-                        target: route.key,
-                        canPreventDefault: true,
-                    });
-
-                    if (!isFocused && !event.defaultPrevented) {
-                        navigation.navigate(route.name);
+                    if (label === 'My Cart') {
+                        navigation.navigate('Confirm Payment');
+                    } else {
+                        const event = navigation.emit({
+                            type: 'tabPress',
+                            target: route.key,
+                            canPreventDefault: true,
+                        });
+ 
+                        if (!isFocused && !event.defaultPrevented) {
+                            navigation.navigate(route.name);
+                        }
                     }
                 };
 
