@@ -18,7 +18,7 @@ const Payment = ({navigation}) => {
                         <View >
                             <View>
                                 <View>
-                                    <Text style={{color:'#ADADAD'}}></Text>
+                                    <Text style={{color:'#ADADAD'}}>4</Text>
                                 </View>
                             </View>
                         </View>

@@ -102,7 +102,7 @@ const Home = ({ navigation }) => {
                                     key={index}
                                     source={image}
                                     style={{ width: windowWidth, height: 200 }}
-                                    resizeMode="cover"
+                                    resizeMode="contain"
                                 />
                             ))}
                         </ScrollView>

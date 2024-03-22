@@ -22,6 +22,7 @@ const AuthStack = () => (
     <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
     <Stack.Screen name="Confirm Payment" component={ConfirmPayment} options={{ headerShown: false }} />
     <Stack.Screen name="Checkout" component={Checkout} options={{ headerShown: false }} />
+    <Stack.Screen name="Payment" component={Payment} options={{ headerShown: false }} />
   </Stack.Navigator>
 );
  
