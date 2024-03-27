@@ -38,7 +38,7 @@ const ConfirmPayment = ({ navigation }) => {
                                             <Text style={{ fontSize: 15, color: '#000', fontWeight: 500 }}>35$</Text>
                                             <Text style={{ fontSize: 12, color: '#BCBCBC', fontWeight: 500, marginLeft: 5 }}>/5 kg</Text>
                                             <Text style={{ fontSize: 12, color: '#BCBCBC', fontWeight: 500, marginLeft: 5, textDecorationLine: 'line-through' }}>10$ /1 kg</Text>
-                                        </View> 
+                                        </View>
                                     </View>
                                 </View>
                                 <View style={{ borderRadius: 6, paddingHorizontal: 10, paddingVertical: 5, backgroundColor: COLORS.primary }}>
