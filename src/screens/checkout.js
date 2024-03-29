@@ -12,16 +12,18 @@ const Checkout = ({ navigation }) => {
     const nextPage = () => {
         navigation.navigate('Payment');
     }
-
+    const goBack = () => {
+        navigation.goBack();
+    }
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
             <TouchableWithoutFeedback onPress={onCancel}>
                 <View style={{ marginHorizontal: 20, marginTop: 45, flexDirection: 'column', rowGap: 25 }}>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                        <View style={{ width: 50, height: 50, borderRadius: 50, borderColor: '#AEAEAE', borderWidth: 1, justifyContent: 'center', alignItems: 'center' }}>
+                        <TouchableOpacity onPress={goBack} style={{ width: 50, height: 50, borderRadius: 50, borderColor: '#AEAEAE', borderWidth: 1, justifyContent: 'center', alignItems: 'center' }}>
                             <Image source={require("../assets/arrow-left.png")} />
-                        </View>
+                        </TouchableOpacity>
                         <Text style={{ color: '#ADADAD', marginLeft: 85, fontSize: 23, color: '#000' }}>Checkout</Text>
                     </View>
 

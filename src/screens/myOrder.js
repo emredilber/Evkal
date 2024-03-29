@@ -15,11 +15,8 @@ const MyOrder = ({ navigation }) => {
             <TouchableWithoutFeedback onPress={onCancel} >
                 <View>
                     <View style={{ marginHorizontal: 20, marginTop: 20, flexDirection: 'column', rowGap: 25 }}>
-                        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                            <View style={{ width: 50, height: 50, borderRadius: 50, borderColor: '#AEAEAE', borderWidth: 1, justifyContent: 'center', alignItems: 'center' }}>
-                                <Image source={require("../assets/arrow-left.png")} />
-                            </View>
-                            <Text style={{ color: '#ADADAD', marginLeft: 85, fontSize: 23, color: '#000' }}>Checkout</Text>
+                        <View style={{ flexDirection: 'row', justifyContent:'center',alignItems: 'center' }}>
+                            <Text style={{ color: '#ADADAD', fontSize: 23, color: '#000' }}>My Order</Text>
                         </View>
 
                         <View>
@@ -31,7 +28,8 @@ const MyOrder = ({ navigation }) => {
                             <View style={{ height: 3.5, width: 100, backgroundColor: COLORS.primary, marginLeft: -7, borderTopLeftRadius: 15, borderTopRightRadius: 15 }}></View>
                         </View>
                     </View>
-                    <ScrollView contentContainerStyle={{paddingBottom:150}}>
+                    
+                    <ScrollView contentContainerStyle={{paddingBottom:120}}>
                         <View style={{backgroundColor: '#f1f1f1', flexDirection: 'column', rowGap: 25, paddingTop: 20 }}>
                             <View style={{ marginHorizontal: 35, backgroundColor: '#fff', padding: 15, flexDirection: 'column', rowGap: 15, borderRadius: 15 }}>
                                 <View style={{ borderRadius: 15, backgroundColor: '#FFFCBB', justifyContent: 'center', paddingHorizontal: 8, paddingVertical: 5, flexDirection: 'column', alignSelf: 'flex-start' }}>
@@ -127,7 +125,6 @@ const MyOrder = ({ navigation }) => {
                             </View>
                         </View>
                     </ScrollView>
-
                 </View>
             </TouchableWithoutFeedback>
         </SafeAreaView >

@@ -12,15 +12,18 @@ const ConfirmPayment = ({ navigation }) => {
     const nextPage = () => {
         navigation.navigate('Checkout');
     }
+    const goBack = () => {
+        navigation.navigate('MainTabs');
+    }
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
             <TouchableWithoutFeedback onPress={onCancel} >
                 <View style={{ marginHorizontal: 20, marginTop: 45 }}>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                        <View style={{ width: 50, height: 50, borderRadius: 50, borderColor: '#AEAEAE', borderWidth: 1, justifyContent: 'center', alignItems: 'center' }}>
+                        <TouchableOpacity onPress={goBack} style={{ width: 50, height: 50, borderRadius: 50, borderColor: '#AEAEAE', borderWidth: 1, justifyContent: 'center', alignItems: 'center' }}>
                             <Image source={require("../assets/arrow-left.png")} />
-                        </View>
+                        </TouchableOpacity>
                         <Text style={{ color: '#ADADAD', marginLeft: 45, fontSize: 23, color: '#000' }}>Rewiev Summary</Text>
                     </View>
 
